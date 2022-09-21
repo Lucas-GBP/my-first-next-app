@@ -1,5 +1,6 @@
 import React, { FC, useRef, useState } from "react";
 import { CalMatrix, matrixButton } from "./CalMatrix";
+import styles from "./Calculator.module.css"
 
 enum calStates{
     Input_1,
@@ -117,8 +118,8 @@ export const Calculator: FC<calculatorProps> = (props) => {
 
     const displayWidthPx:string = ' w-['+((calMatrix[0].length*2-2)*4+(calMatrix[0].length*64))+'px]'
 
-    return <div className="calculator" id={props.id}>
-        <div className={"calculator-display max-w-[280px]"+displayWidthPx}>{display}</div>
-        <CalMatrix matrix={calMatrix} sizeButton='w-50'/>
+    return <div className={styles.calculator} id={props.id}>
+        <div className={styles.calculator_display +" max-w-[280px]"+displayWidthPx}>{display}</div>
+        <CalMatrix matrix={calMatrix}/>
     </div>;
 }

@@ -1,24 +1,22 @@
-@layer components{
-    .calculator {
-        @apply bg-black m-auto p-3 max-w-fit;
-    }
+.calculator {
+    @apply bg-black m-auto p-3 max-w-fit;
+}
 
-    .calculator_button{
-        @apply bg-gray-900 
-        cursor-pointer 
-        appearance-none
-        border-none
-        w-16 h-16 
-        p-0 m-1 
-        text-4xl text-slate-100 text-center
-        hover:bg-blue-900;
-    }
+.calculator_button{
+    @apply bg-gray-900 
+    cursor-pointer 
+    appearance-none
+    border-none
+    w-16 h-16 
+    p-0 m-1 
+    text-4xl text-slate-100 text-center
+    hover:bg-blue-900;
+}
 
-    .calculator-display {
-        @apply border-0 
-        h-16
-        m-1
-        text-black text-6xl bg-slate-100
-        ;
-    }
+.calculator_display {
+    @apply border-0 
+    h-16
+    m-1
+    text-black text-6xl bg-slate-100
+    ;
 }

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from "/../Calculator.module.css"
+import styles from "./../Calculator.module.css"
 
 export type matrixButton = {
     label: string;

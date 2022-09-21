@@ -1,20 +1,36 @@
 import type { NextPage } from 'next'
-/*import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'*/
+import Head from 'next/head'
 import Link from 'next/link'
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 
 import { Hello } from '../components/Hello'
-import { Page } from '../components/Page'
+import { getSortedPostsData } from '../lib/posts'
 
 const Home: NextPage = () => {
-    return (
-        <Page title='Home'>
+    return (<>
+        <Head>
+            <title>Home</title>
+        </Head>
+
+        <header className="bg-black h-16 text-left mb-4">
+            <h1 className="text-5xl pl-5">Home</h1>
+        </header>
+        <main className='pl-5'>
+            <Hello />
+
             <ul>
-                <li><Link href='/projects/calculatorReact'>Calculator React</Link></li>
+                <li className='hover:bg-blue-900'><Link href='/projects/calculatorReact'>Calculator React</Link></li>
             </ul>
-        </Page>
-    )
+
+            {/*<section>
+                <h2> Blog Posts </h2>
+                <ul></ul>
+            </section>*/}
+        </main>
+        <footer>
+            
+        </footer>
+    </>);
 }
 
-export default Home
+export default Home;
