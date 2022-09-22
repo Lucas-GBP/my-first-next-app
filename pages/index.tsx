@@ -7,13 +7,9 @@ import { Hello } from '../components/Hello'
 import { getSortedPostsData } from '../lib/posts'
 
 export const getStaticProps:GetStaticProps = async () =>{
-    const res = getSortedPostsData();
-    const info = res.json();
-
-    console.log(info);
     return{
         props:{
-            data: info,
+            
         }
     }
 }
