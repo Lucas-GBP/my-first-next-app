@@ -6,6 +6,18 @@ import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import { Hello } from '../components/Hello'
 import { getSortedPostsData } from '../lib/posts'
 
+export const getStaticProps:GetStaticProps = async () =>{
+    const res = getSortedPostsData();
+    const info = res.json();
+
+    console.log(info);
+    return{
+        props:{
+            data: info,
+        }
+    }
+}
+
 const Home: NextPage = () => {
     return (<>
         <Head>
@@ -22,10 +34,6 @@ const Home: NextPage = () => {
                 <li className='hover:bg-blue-900'><Link href='/projects/calculatorReact'>Calculator React</Link></li>
             </ul>
 
-            {/*<section>
-                <h2> Blog Posts </h2>
-                <ul></ul>
-            </section>*/}
         </main>
         <footer>
             
