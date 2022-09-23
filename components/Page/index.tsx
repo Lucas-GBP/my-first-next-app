@@ -15,7 +15,7 @@ export const Page:FC<pageProps> = (props) => {
             {props.children}
         </main>
         <footer className='hover:bg-blue-900'>
-            <Link href="\">Home</Link>
+            <Link href="/">Home</Link>
         </footer>
     </>;
 }

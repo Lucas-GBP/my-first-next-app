@@ -4,17 +4,20 @@ import Link from 'next/link'
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 
 import { Hello } from '../components/Hello'
-import { getSortedPostsData } from '../lib/posts'
 
-export const getStaticProps:GetStaticProps = async () =>{
+interface HomeProps {
+    
+}
+
+export const getStaticProps:GetStaticProps = async (context) =>{
     return{
         props:{
             
-        }
+        },
     }
 }
 
-const Home: NextPage = () => {
+const Home: NextPage<HomeProps> = (props) => {
     return (<>
         <Head>
             <title>Home</title>
@@ -28,8 +31,8 @@ const Home: NextPage = () => {
 
             <ul>
                 <li className='hover:bg-blue-900'><Link href='/projects/calculatorReact'>Calculator React</Link></li>
+                <li className='hover:bg-blue-900'><Link href='/projects/serverSideRendering'>Server Side Rendering</Link></li>
             </ul>
-
         </main>
         <footer>
             
