@@ -16,15 +16,21 @@ const Home: NextPage = () => {
                 <Link href='/projects/calculatorReact'>
                     <a className='w-full p-2 mt-2 text-blue-600 text-2xl
                         hover:bg-blue-900 hover:text-white rounded-sm hover:underline 
-                        transition-all duration-250'>
+                        transition-all duration-250 group'>
                         Calculator React
+                        <span className='absolute w-auto scale-0 group-hover:scale-100'>
+                            
+                        </span>
                     </a>
                 </Link>
                 <Link href='/projects/serverSideRendering'>
                     <a className='w-full p-2 mt-2 text-blue-600 text-2xl
                         hover:bg-blue-900 hover:text-white rounded-sm hover:underline 
-                        transition-all duration-250'>
+                        transition-all duration-250 group'>
                         Server Side Rendering 
+                        <span className='absolute w-auto scale-0 group-hover:scale-100'>
+                            
+                        </span>
                     </a>
                 </Link>
             </div>
