@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
 
 import LeftBarLink from './../components/LeftBarLinks'
 
@@ -15,8 +14,8 @@ const Home: NextPage = () => {
         <main className='pl-5'>
             <LeftBarLink 
                 links={[ 
-                    {href: '/projects/calculatorReact', label:'React Calculator', description: 'Uma Descrição'},
-                    {href: '/projects/serverSideRendering', label: 'Server Side Rendering '}
+                    {href: '/projects/calculatorReact', label:'React Calculator'},
+                    {href: '/projects/serverSideRendering', label: 'Server Side Rendering', description: 'Uma Descrição'}
                 ]}>
                 Projects
             </LeftBarLink>
